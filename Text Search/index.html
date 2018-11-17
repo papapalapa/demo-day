@@ -11,35 +11,29 @@
 </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav class="black">
-            <div class="nav-wrapper container">
-                <a href="/" class="brand-logo">Text Search@Demo Day</a>
-            </div>
-        </nav>
-    </div>
 	<br>
-	
+	<br>
+	<br>
 	<div class="container">
 		<div class="row">
+			<h1>Case Sensitive Search</h1>
 			<form class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="email" type="email" class="validate">
-						<label for="email">Search Keyword</label>
-						<!-- <span class="helper-text" data-error="wrong" data-success="right">Type your search keyword</span> -->
-					</div>
+				<div class="input-field col s12">
+					<input id="keyword" type="text" class="validate" onkeyup="highlight();">
+					<label for="keyword">Search Keyword</label>
+					<!-- <span class="helper-text" data-error="wrong" data-success="right">Type your search keyword</span> -->
 				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<textarea id="textarea1" class="materialize-textarea">What if I told you there's an app on the market that highlights certain keywords for you?</textarea>
-						<label for="textarea1">Copy and paste your text</label>
-					</div>
+				<div class="input-field col s12">
+					<div class="flow-text" contenteditable="true" id="searchText">Your undergraduate education needs to be as multidimensional as you are. It should challenge you academically, expose you to a diversity of global cultures, and enable you to develop the broad knowledge and practical skills needed to solve the most complex issues of our time.
+							Minerva is intentionally designed to develop your intellect across multiple disciplines, as well as critical life skills, professional capabilities, and key aspects of your personal character.</div>
 				</div>
+				<div class="chip"><span id="count">0</span> found</div>
 			</form>
+			
 		</div>
 	</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./app.js"></script>
 
 </html>
